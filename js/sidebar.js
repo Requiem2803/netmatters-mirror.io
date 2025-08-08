@@ -2,7 +2,7 @@ $(function () {
     const $nav = $('#sidebar');
     const $menuBtn = $('.menu-button');
     const $overlay = $('#overlay');
-    const $mainContent = $('#main-content');
+    const $mainContent = $('html');
 
     let sidebarVisible = false;
 
@@ -22,7 +22,6 @@ $(function () {
         $menuBtn.css({
             cursor: 'pointer',
             zIndex: 100001
-            // no position, top, right here
         });
 
         $overlay.hide();

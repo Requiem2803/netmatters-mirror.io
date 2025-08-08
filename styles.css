@@ -53,10 +53,10 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
+  z-index: 9999999;
   display: none;
 }
 
@@ -65,6 +65,7 @@
   margin-left: 50px;
   width: 200px;
   z-index: 1000000000;
+  cursor: pointer;
 }
 #sidebar h3 {
   color: white;
@@ -115,6 +116,7 @@ header {
   height: 150px;
   margin-bottom: 0px;
   z-index: 100000;
+  width: 100vw;
 }
 header nav {
   display: none;
@@ -122,12 +124,12 @@ header nav {
 
 .header-top {
   height: 10vh;
-  width: 100vw;
+  max-width: 99vw;
   gap: 5px;
   display: flex;
   align-items: center;
-  margin-top: 50px;
   margin-left: 0;
+  margin-top: 0;
 }
 
 div {
@@ -145,6 +147,10 @@ div {
 
 button {
   text-transform: uppercase;
+  transition: 0.5s;
+}
+button:hover {
+  cursor: pointer;
 }
 
 .menu-button {
@@ -297,7 +303,7 @@ body a {
 .grid-container {
   display: grid;
   gap: 5px;
-  width: 90%;
+  width: 80%;
   margin: 20px 5%;
 }
 .grid-container h3 {
@@ -336,7 +342,7 @@ body a {
 .grid-container2 {
   display: grid;
   gap: 5px;
-  width: 90%;
+  width: 80%;
   margin: 0 5%;
 }
 .grid-container2 h3 {
@@ -357,7 +363,7 @@ body a {
 .grid-container2 div {
   border: 1px solid black;
   text-align: center;
-  width: 80%;
+  max-width: 100%;
   border-radius: 20px;
   height: 100%;
   box-shadow: 2px 2px 10px;
@@ -619,10 +625,10 @@ header.header-hidden {
   overflow: hidden;
   width: 80%;
   margin-top: 20px;
+  height: 10vh;
 }
 .partner-logos img {
   filter: grayscale(1);
-  height: 100px;
   margin-top: 50px;
 }
 .partner-logos img:hover {
@@ -689,6 +695,10 @@ header.header-hidden {
 .news-posts article {
   width: 300px;
   border: 1px solid gray;
+  transition: 0.5s;
+}
+.news-posts article:hover {
+  transform: translate(0, -10px);
 }
 .news-posts button {
   margin-bottom: 20px;
@@ -713,6 +723,10 @@ header.header-hidden {
 .article-1 button {
   background-color: #4183d7;
   color: white;
+}
+
+li:hover {
+  cursor: pointer;
 }
 
 .article-2 h4 {
@@ -903,7 +917,8 @@ footer .footer-logo {
     color: white;
   }
   #header-nav .Support:hover {
-    background-color: #4183d7;
+    background-color: rgb(44.2608695652, 117.2913043478, 210.2391304348);
+    cursor: pointer;
   }
   #header-nav .Support:hover #support-triangle {
     display: block;
@@ -1378,10 +1393,15 @@ footer .footer-logo {
     width: 300px;
   }
   header .contact {
-    font-size: 23px;
+    font-size: 18px;
     background-color: #a09ca4;
     width: auto;
     padding: 0 10px;
+    height: 56px;
+  }
+  header .contact:hover {
+    background-color: rgb(134.5, 129.4263157895, 139.5736842105);
+    cursor: pointer;
   }
   header .icon-contact::before {
     content: "\e942";
@@ -1389,10 +1409,15 @@ footer .footer-logo {
     padding-right: 5px;
   }
   header .support {
-    font-size: 23px;
+    font-size: 18px;
     background-color: #4183d7;
     width: auto;
     padding: 0 10px;
+    height: 56px;
+  }
+  header .support:hover {
+    background-color: rgb(39.8260869565, 105.5391304348, 189.1739130435);
+    cursor: pointer;
   }
   header .icon-support::before {
     content: "\e96f";
@@ -1405,7 +1430,6 @@ footer .footer-logo {
   header .buttons {
     display: block;
     height: 60px;
-    width: 100px;
   }
   header .buttons button {
     display: block;
@@ -1415,8 +1439,8 @@ footer .footer-logo {
     height: 50px;
   }
   .menu-button {
-    height: 60px;
-    width: 60px;
+    height: 56px;
+    width: 56px;
   }
   .search-bar {
     display: flex;
@@ -1428,6 +1452,7 @@ footer .footer-logo {
     border: none;
     width: 60px;
     height: 60px;
+    border-radius: 0 5px 5px 0;
   }
   .search-bar button img {
     filter: invert(1);
@@ -1448,9 +1473,8 @@ footer .footer-logo {
   }
   .header-top {
     gap: 5px;
-    height: 40px;
+    height: 25px;
     align-items: normal;
-    margin: auto auto;
     justify-content: center;
   }
   .header-top div {
