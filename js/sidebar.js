@@ -15,7 +15,6 @@ $(function () {
             width: '350px',
             height: '100%',
             overflowY: "auto",
-            zIndex: 1000
         });
 
         // Remove fixed positioning so button moves with main content
