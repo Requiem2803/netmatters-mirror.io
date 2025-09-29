@@ -7,7 +7,7 @@
   font-display: block;
 }
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: sans-serif;
   color: #333645;
   margin: 0 auto;
 }
@@ -16,6 +16,12 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+
+.office-location {
+  display: flex;
+  max-width: 300px;
+  flex-direction: column;
 }
 
 #cookie-banner {

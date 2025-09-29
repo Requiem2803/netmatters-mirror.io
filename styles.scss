@@ -17,7 +17,7 @@ $text-color: #333645;
 }
 
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: sans-serif;
   color: $text-color;
   margin: 0 auto;
 }
@@ -26,6 +26,12 @@ $text-color: #333645;
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+
+.office-location {
+  display: flex;
+  max-width: 300px;
+  flex-direction: column;
 }
 
 #cookie-banner {

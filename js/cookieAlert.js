@@ -1,14 +1,14 @@
-document.addEventListener('DOMContentLoaded', () => {
-const cookieBanner = document.getElementById('cookie-banner');
-const acceptBtn = document.getElementById('accept-cookies');
+document.addEventListener("DOMContentLoaded", function () {
+  const cookieBanner = document.getElementById("cookie-banner");
+  const acceptBtn = document.getElementById("accept-cookies");
 
-// Only show banner if not previously accepted
-if (!localStorage.getItem('cookieAccepted')) {
-cookieBanner.style.display = 'flex';
-}
+  // Check if cookie consent is already given
+  if (!localStorage.getItem("cookieAccepted")) {
+    cookieBanner.style.display = "block";
+  }
 
-acceptBtn.addEventListener('click', () => {
-localStorage.setItem('cookieAccepted', 'true');
-cookieBanner.style.display = 'none';
-});
+  acceptBtn.addEventListener("click", function () {
+    localStorage.setItem("cookieAccepted", "true");
+    cookieBanner.style.display = "none";
+  });
 });
